@@ -9,7 +9,9 @@
 .header {
   margin-bottom: 20px;
 }
-
+.header a {
+  padding: 5px;
+}
 .profile-card {
   border: 1px solid #ddd;
   border-radius: 12px;
