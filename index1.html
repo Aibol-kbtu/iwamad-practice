@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oralbekuly Aibol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Oralbekuly Aibol</h1>
+        <p>IT Management Student</p>
+    </header>
+
+    <main class="container">teams
+        <section class="card">
+            <img src="Aibol.jpeg" alt="Photo of Aibol" >
+            <p>
+                I am a third-year IT Management student at KBTU.
+                I am interested in subjects that can help me learn new
+                technologies and upgrade my skills for the future.
+                I also want to improve my practical skills by building
+                real web projects.
+            </p>
+
+            <div class="links">
+                <a href="#goals">Goals</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </section>
+
+        <button class="like-btn">Like</button>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Oralbekuly Aibol</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.like-btn');
+
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('liked');
+
+            btn.textContent = btn.classList.contains('liked')
+                ? 'Liked'
+                : 'Like';
+        });
+    </script>
+
+</body>
+</html>
