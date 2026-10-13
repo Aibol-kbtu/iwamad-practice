@@ -4,6 +4,9 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter } from 'react-router'
 import { LikesProvider } from "./context/LikesContext.tsx";
+import './styles/tokens.css'
+import './index.css'
+import './styles/ui.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

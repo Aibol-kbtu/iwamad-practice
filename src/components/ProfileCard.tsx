@@ -35,3 +35,4 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, skills }: ProfileCardP
     </div>
   );
 };
+export default ProfileCard;

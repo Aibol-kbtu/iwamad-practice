@@ -9,3 +9,5 @@ export const Footer = ({ year }: FooterProps) => {
     </footer>
   );
 };
+
+export default Footer;

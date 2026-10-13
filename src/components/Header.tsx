@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import { useLikes } from "../context/LikesContext";
-
+import logo from '../assets/logo.svg';
 type HeaderProps = {
   title: string;
 };
@@ -10,7 +10,14 @@ export const Header = ({ title }: HeaderProps) => {
 
   return (
     <header className="header">
-      <h1>{title}</h1>
+      <div className="site-brand">
+        <img
+          src={logo}
+          alt="My Portfolio logo"
+          className="site-logo"
+        />
+        <h1>{title}</h1>
+      </div>
       <nav>
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/skills">Skills</NavLink>

@@ -1,44 +1,41 @@
-.button {
-  display: inline-flex;
+.header {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-md);
-  font: inherit;
-  cursor: pointer;
-}
-
-.button--primary {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  border: 1px solid var(--color-primary);
-}
-
-.button--secondary {
-  background-color: var(--color-surface);
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-}
-
-.card {
-  background-color: var(--color-surface);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
   padding: var(--space-4);
 }
 
-.tag {
-  display: inline-block;
-  padding: var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text);
-  background-color: var(--color-surface);
+.header nav {
+  display: flex;
+  gap: var(--space-4);
 }
 
-.button:focus-visible {
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.site-brand h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.site-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
