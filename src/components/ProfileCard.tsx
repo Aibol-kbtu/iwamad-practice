@@ -1,6 +1,6 @@
 import { type Skill, SkillBadge } from './SkillBadge';
 import { LikeButton } from './LikeButton';
-import { useLikes } from '../context/LikesContext';
+import Card from './ui/Card';
 
 type ProfileCardProps = {
   name: string;
@@ -11,10 +11,9 @@ type ProfileCardProps = {
 };
 
 export const ProfileCard = ({ name, role, bio, avatarUrl, skills }: ProfileCardProps) => {
-  const { likes } = useLikes();
 
   return (
-    <div className={`profile-card ${likes > 0 ? 'liked-highlight' : ''}`}>
+    <Card >
       <img src={avatarUrl || "./Aibol.jpeg"} alt={name} className="avatar" />
       <h2>{name}</h2>
       <p className="role">{role}</p>
@@ -32,7 +31,7 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, skills }: ProfileCardP
           <p className="empty-message">No skills added yet.</p>
         )}
       </div>
-    </div>
+    </Card>
   );
 };
 export default ProfileCard;

@@ -6,7 +6,6 @@ import { LikesProvider } from '../context/LikesContext';
 
 describe('LikeButton', () => {
   it('changes its visible text after a click', async () => {
-    // arrange
     render(
       <LikesProvider>
         <LikeButton />
@@ -15,10 +14,8 @@ describe('LikeButton', () => {
     const button = screen.getByRole('button', { name: /like/i });
     expect(button).toHaveTextContent('🤍 Like (0)');
 
-    // act
     await userEvent.click(button);
 
-    // assert
     expect(button).toHaveTextContent('❤️ Liked (1)');
   });
 });

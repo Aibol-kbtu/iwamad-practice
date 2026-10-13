@@ -1,11 +1,11 @@
 import { useLikes } from '../context/LikesContext';
-
+import Button from './ui/Button';
 export const LikeButton = () => {
   const { likes, addLike } = useLikes();
 
   return (
-    <button onClick={addLike} className="like-button">
+    <Button onClick={addLike}>
       {likes > 0 ? '❤️ Liked' : '🤍 Like'} ({likes})
-    </button>
+    </Button>
   );
 };
