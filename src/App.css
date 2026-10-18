@@ -1,0 +1,52 @@
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+.header a {
+  padding: 5px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.role {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.skills-container {
+  margin-top: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+.empty-message {
+  color: #888;
+  font-style: italic;
+}
+
+.footer {
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
