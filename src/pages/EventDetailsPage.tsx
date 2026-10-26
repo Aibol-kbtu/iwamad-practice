@@ -1,0 +1,28 @@
+import { useParams, Link } from 'react-router';
+import  { events } from '../data/events';
+import EventSignupForm from '../components/EventSignupForm';
+
+export default function EventDetailsPage() {
+  const { eventId } = useParams();
+  const event = events.find((p) => p.id === Number(eventId));
+
+  if (!event) {
+    return (
+      <main>
+        <h1>Event not found</h1>
+        <p>No event with id {eventId}.</p>
+        <Link to="/events">Back to all events</Link>
+      </main>
+    );
+  }
+
+  return (
+    <main>
+      <h1>{event.title}</h1>
+      <p>{event.date}</p>
+      <p>{event.place}</p>
+      <Link to="/events">Back to all events</Link>
+      <EventSignupForm event={event} />
+    </main>
+  );
+}
