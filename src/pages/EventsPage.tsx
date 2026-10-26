@@ -1,4 +1,3 @@
-
 import { events } from '../data/events';
 import EventCard from '../components/EventCard';
 

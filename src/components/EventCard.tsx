@@ -1,5 +1,7 @@
 import { Link } from 'react-router';
-import  { type CampusEvent } from '../data/events';
+import { type CampusEvent } from '../data/events';
+import Card from './ui/Card';
+import Tag from './ui/Tag';
 
 type EventsCardProps = {
   event: CampusEvent;
@@ -7,15 +9,15 @@ type EventsCardProps = {
 
 export default function EventCard({ event }: EventsCardProps) {
   return (
-    <article>
-      <h2>
-        <Link to={`/events/${event.id}`}>
-          {event.title}
-        </Link>
-      </h2>
+    <Card>
+      <h2>{event.title}</h2>
 
       <p>Date: {event.date}</p>
       <p>Place: {event.place}</p>
-    </article>
+
+      <Tag label={`${event.seats} seats`} />
+
+      <Link to={`/events/${event.id}`}>Details</Link>
+    </Card>
   );
 }
